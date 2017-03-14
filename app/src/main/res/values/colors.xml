@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008080</color>
+    <color name="colorPrimaryDark">#005f60</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorPrimaryDesat">#009fa0</color>
+    <color name="colorPrimaryAlt">#106f70</color>
+    <color name="colorPrimaryLight">#00c6c7</color>
+    <color name="colorAccentSecondary">#ff7f7f</color>
+
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#777777</color>
+    <color name="aluminum">#999999</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="approved">#1fa120</color>
+    <color name="rejected">#a11f1f</color>
+    <color name="alphaPrimary">#40004D99</color>
+    <color name="snack_yellow">#FFEB3B</color>
+    <color name="overlay_color">#10000000</color>
+
+    <!--weather colors-->
+    <color name="hotish">#FFF176</color>
+    <color name="hot">#FFEB3B</color>
+    <color name="hoter">#F57F17</color>
+    <color name="hotest">#B71C1C</color>
+    <color name="rainy">#607D8B</color>
+    <color name="heavy_rain">#37474F</color>
+    <color name="cold">#84FFFF</color>
+    <color name="coldest">#00BCD4</color>
+    <color name="coldest_light">#4400BCD4</color>
+</resources>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:id="@+id/card_login"
+    android:theme="@style/AppTheme.Light"
+    android:background="@drawable/card_view_background"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_centerInParent="true"
+    app:cardPreventCornerOverlap="true"
+    app:cardElevation="6dp"
+    card_view:cardCornerRadius="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/parent_layout"
+        android:padding="12dp"
+        tools:background="@drawable/bg_gradient_sunny">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Day"
+                    android:textSize="18sp"
+                    android:textColor="@color/jet"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="20"
+                    android:id="@+id/temp_max"
+                    android:layout_gravity="center"
+                    android:textColor="@color/oil" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Night"
+                    android:textColor="@color/jet"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="10"
+                    android:id="@+id/temp_min"
+                    android:layout_gravity="center"
+                    android:textColor="@color/oil" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="50sp"
+                    android:id="@+id/temp_main"
+                    android:textColor="@color/oil"
+                    tools:text="24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="°C"
+                    android:layout_marginTop="8dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/oil"
+                    android:gravity="top" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/desc_image"
+                    android:layout_gravity="center"
+
+                    tools:src="@drawable/ozlo_ic_inverted_zoomed" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No precipitation expected today."
+            android:textColor="@color/oil"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:id="@+id/rain_info"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
