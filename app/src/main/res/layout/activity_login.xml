@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:text="A friend who you can rely on for all your weathery questions."
+            android:text="A Friend whom you can rely on."
             android:gravity="center"
             android:id="@+id/sub_title"
             android:alpha="0.9"

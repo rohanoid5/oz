@@ -18,7 +18,7 @@ public interface APILogin {
 
     @FormUrlEncoded
     @POST("/users/authenticate")
-    Call<AccessToken> userLogin(@Field("username") String userName, @Field("password") String password);
+    Call<AccessToken> userLogin(@Field("email") String email, @Field("password") String password);
 
     @FormUrlEncoded
     @POST("/users/register")

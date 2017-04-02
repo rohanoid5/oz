@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="rohan.app.com.ozlo">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -10,7 +11,8 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_oz"
         android:label="@string/app_name"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        tools:replace="android:icon">
         <activity
             android:name=".activities.MainActivity"
             android:theme="@style/AppTheme.Primary.Launcher">
@@ -24,8 +26,11 @@
             android:name=".activities.LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.Primary" />
-        <activity android:name=".activities.SignUpActivity"
+        <activity
+            android:name=".activities.SignUpActivity"
             android:label="@string/app_name"
+            android:theme="@style/AppTheme.Primary" />
+        <activity android:name=".activities.UserInfoActivity"
             android:theme="@style/AppTheme.Primary" />
     </application>
 

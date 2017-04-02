@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@drawable/card_view_background"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp">
+
+        <flepsik.github.com.progress_ring.ProgressRingView
+            android:id="@+id/progress_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:animated="false"
+            app:animation_duration="5000"
+            app:background_color="@color/colorPrimaryLight"
+            app:background_progress_color="#e4e7d3"
+            app:corner_edges="true"
+            app:progress=".6"
+            app:progress_color="@color/colorPrimaryDark"
+            app:progress_fill="false"
+            app:ring_width="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="60%"
+            android:textSize="40sp"
+            android:id="@+id/progress_percentage"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/disease_name"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/oil"
+        android:text="Intercostal neuralgia"/>
+
+</LinearLayout>

@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 //        getSupportActionBar().setElevation(0);
 
+//        startActivity(new Intent(this, UserInfoActivity.class));
+
         sharedPreferences = getSharedPreferences(getString(R.string.MY_TOKEN), MODE_PRIVATE);
         String accessTokenJson = sharedPreferences.getString(getString(R.string.accessToken), null);
         if (accessTokenJson != null) {

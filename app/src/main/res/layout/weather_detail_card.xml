@@ -120,7 +120,6 @@
                     android:layout_height="match_parent"
                     android:id="@+id/desc_image"
                     android:layout_gravity="center"
-
                     tools:src="@drawable/ozlo_ic_inverted_zoomed" />
 
             </LinearLayout>
@@ -134,7 +133,7 @@
             android:textColor="@color/oil"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:id="@+id/rain_info"
+            android:id="@+id/desc_detail"
             android:textSize="16sp"/>
 
     </LinearLayout>

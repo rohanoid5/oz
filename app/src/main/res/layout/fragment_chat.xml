@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:orientation="vertical"
+            android:id="@+id/linear_layout"
             android:gravity="center">
 
             <include layout="@layout/chat_head_text_input" />
@@ -41,10 +42,5 @@
         </LinearLayout>
 
     </RelativeLayout>
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dummy_view"/>
 
 </LinearLayout>
