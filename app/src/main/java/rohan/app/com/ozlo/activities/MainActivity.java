@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
             finish();
             startActivity(intent);
+            return;
         }
 
         FragmentManager fragmentManager = getSupportFragmentManager();

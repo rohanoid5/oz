@@ -29,7 +29,7 @@ public class OzloApplication extends Application {
         // initalize Calligraphy
         CalligraphyConfig.initDefault(
                 new CalligraphyConfig.Builder()
-                        .setDefaultFontPath("fonts/AvenirLTStd-Roman.otf")
+                        .setDefaultFontPath("fonts/Aller_Lt.ttf")
                         .setFontAttrId(R.attr.fontPath)
                         .build()
         );
@@ -40,9 +40,8 @@ public class OzloApplication extends Application {
             public void onActivityCreated(Activity activity,
                                           Bundle savedInstanceState) {
 
-                // new activity created; force its orientation to portrait
-//                activity.setRequestedOrientation(
-//                        ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                activity.setRequestedOrientation(
+                        ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
             }
 

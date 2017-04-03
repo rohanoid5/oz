@@ -15,55 +15,24 @@
         android:orientation="horizontal"
         android:gravity="end">
 
-        <android.support.v7.widget.CardView
+        <RelativeLayout
             android:id="@+id/card_view_outer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="4dp"
             android:minWidth="40dp"
-            card_view:cardBackgroundColor="@color/colorPrimaryDark"
-            card_view:cardCornerRadius="20dp"
-            card_view:cardElevation="1dp"
-            card_view:cardMaxElevation="1dp"
-            card_view:cardPreventCornerOverlap="true">
-
-            <RelativeLayout
-                android:id="@+id/loadingPanel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                >
-
-
-                <ImageView
-                    android:id="@+id/me_thumb_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:visibility="gone"
-                    android:maxHeight="200dp"
-                    android:maxWidth="200dp"
-                    />
-                <ProgressBar
-                    android:id="@+id/progress_bar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:indeterminate="true"
-                    android:layout_centerInParent="true"
-                    android:visibility="gone"/>
-            </RelativeLayout>
-
+            android:background="@drawable/human_layout"
+            android:elevation="4dp">
 
             <TextView
                 android:id="@+id/me_text"
-                fontPath="fonts/AvenirLTStd-Book.otf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
                 android:lineSpacingMultiplier="1.2"
                 android:layout_gravity="center_horizontal"
                 android:maxWidth="250dp"
@@ -71,14 +40,15 @@
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 
-        </android.support.v7.widget.CardView>
+        </RelativeLayout>
 
         <ImageView
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:id="@+id/message_status"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_gravity="center|bottom"
+            android:tint="@color/colorPrimary"
             android:src="@drawable/ic_check_circle_black_24dp"/>
 
     </LinearLayout>

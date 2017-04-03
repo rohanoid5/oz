@@ -71,7 +71,7 @@ public class SignUpActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<Registration> call, Response<Registration> response) {
                         if (response.isSuccessful()) {
-                            Call<AccessToken> userLogin = apiLogin.userLogin(String.valueOf(inputUsername.getText()),
+                            Call<AccessToken> userLogin = apiLogin.userLogin(String.valueOf(inputEmail.getText()),
                                     String.valueOf(inputPassword.getText()));
                             userLogin.enqueue(new Callback<AccessToken>() {
                                 @Override
@@ -80,8 +80,7 @@ public class SignUpActivity extends AppCompatActivity {
                                     if (response.isSuccessful()) {
                                         SharedPreferences.Editor editor = sharedPreferences.edit();
                                         editor.putString(getString(R.string.accessToken), response.body().getToken());
-                                        editor.commit();
-                                        onLoginSuccess();
+                                        editor.commit();onLoginSuccess();
                                     } else
                                         Toast.makeText(SignUpActivity.this, "Not Success", Toast.LENGTH_SHORT).show();
                                 }

@@ -15,6 +15,8 @@ public class Constant {
     public static final String WEATHER_API_KEY = "338fcef200d92da1408c75043a3a1c7c";
     public static final String INFER_MEDICA_APP_ID = "215f5ea7";
     public static final String INFER_MEDICA_APP_KEY = "ca81056d95e0da7b0c9143363245b656";
+//    public static final String INFER_MEDICA_APP_ID = "367c4ce4";
+//    public static final String INFER_MEDICA_APP_KEY = "fe2d26ca0ba4e198ebc37ed152abaa85";
 
     public static final String METRIC = "metric";
     public static final String IMPERIAL = "imperial";

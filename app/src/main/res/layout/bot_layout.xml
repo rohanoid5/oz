@@ -11,64 +11,30 @@
     android:gravity="center_vertical|start">
 
 
-        <android.support.v7.widget.CardView
+        <RelativeLayout
             android:id="@+id/card_view_outer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:minWidth="40dp"
-            card_view:cardBackgroundColor="@color/colorAccent"
-            card_view:cardCornerRadius="20dp"
-            card_view:cardElevation="1dp"
-            card_view:cardMaxElevation="1dp"
-            card_view:cardPreventCornerOverlap="true"
+            android:minWidth="30dp"
+            android:elevation="4dp"
+            android:background="@drawable/bot_layout"
             android:layout_margin="4dp">
-            <LinearLayout
-                android:id="@+id/indicators"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical|start"
-                android:layout_margin="12dp"
-                android:visibility="gone"
-                android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/circle_one"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:src="@drawable/indicator_dots" />
-
-                <ImageView
-                    android:id="@+id/circle_two"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:src="@drawable/indicator_dots" />
-
-                <ImageView
-                    android:id="@+id/circle_three"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:src="@drawable/indicator_dots" />
-
-            </LinearLayout>
             <TextView
                 android:id="@+id/bot_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
                 android:singleLine="false"
                 android:text="Will You go there with me?"
                 android:textColor="@color/jet"
                 android:textSize="15sp"
-                android:lineSpacingMultiplier="1.2"
-                fontPath="fonts/AvenirLTStd-Book.otf"/>
+                android:lineSpacingMultiplier="1.2" />
 
-        </android.support.v7.widget.CardView>
+        </RelativeLayout>
 
 </LinearLayout>

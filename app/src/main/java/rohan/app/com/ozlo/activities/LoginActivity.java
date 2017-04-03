@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
@@ -36,6 +37,10 @@ public class LoginActivity extends AppCompatActivity {
     EditText inputPassword;
     @Bind(R.id.login_btn)
     AppCompatButton loginButton;
+    @Bind(R.id.g_login_btn)
+    FloatingActionButton gFab;
+    @Bind(R.id.fb_login_btn)
+    FloatingActionButton fFab;
 
     String userName, password;
     public SharedPreferences sharedPreferences;
@@ -57,6 +62,20 @@ public class LoginActivity extends AppCompatActivity {
 
         userName = String.valueOf(inputEmail.getText());
         password = String.valueOf(inputPassword.getText());
+
+        gFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(LoginActivity.this, "Under construction :)", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        fFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(LoginActivity.this, "Under construction :)", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override

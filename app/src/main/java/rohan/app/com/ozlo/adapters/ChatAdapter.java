@@ -346,8 +346,6 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         Human user = (Human) listItem.get(position);
         meHolder.mInput.setText(user.getInput());
         meHolder.mInput.setVisibility(View.VISIBLE);
-        meHolder.mImage.setVisibility(View.GONE);
-        meHolder.progressBar.setVisibility(View.GONE);
     }
 
     public void removeAt(int position) {
@@ -372,7 +370,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         TextView mInput;
         //  ImageView mIcon;
         @Bind(R.id.card_view_outer)
-        CardView mCard;
+        RelativeLayout mCard;
 //        @Bind(R.id.indicators)
 //        LinearLayout dots;
 
@@ -386,13 +384,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         @Bind(R.id.me_text)
         TextView mInput;
         @Bind(R.id.card_view_outer)
-        CardView mCard;
-        @Bind(R.id.me_thumb_image)
-        ImageView mImage;
-        @Bind(R.id.loadingPanel)
-        RelativeLayout loadingPanel;
-        @Bind(R.id.progress_bar)
-        ProgressBar progressBar;
+        RelativeLayout mCard;
         @Bind(R.id.message_status)
         ImageView messageStatus;
 

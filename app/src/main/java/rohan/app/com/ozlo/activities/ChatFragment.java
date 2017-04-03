@@ -68,11 +68,11 @@ import static org.xmlpull.v1.XmlPullParser.TEXT;
 
 public class ChatFragment extends Fragment {
 
-    String[] ozloGreets = new String[]{"Hi", "My name is Ozlo", "I'm here to help you diagnose your possible diseases.",
-    "Ask me anything like ", "'I have headache.' or 'I have a pain in my back.'"};
+    String[] ozloGreets = new String[]{"Hi", "My name is Ozee.", "I'm here to help you diagnose your possible diseases.",
+    "Ask me anything like ", "'I a have headache.' or 'I have a pain in my back.'"};
 
     String[] ozloHello = new String[]{"Hi!", "Hey! What's up?", "How are you feeling today?",
-            "Hi. Tell me about your symptoms.", "Ozlo's here!"};
+            "Hi. Tell me about your symptoms.", "Ozee's here!"};
 
     @Bind(R.id.recycler_view)
     RecyclerView recyclerView;
@@ -126,6 +126,10 @@ public class ChatFragment extends Fragment {
 
         mAdapter = new ChatAdapter(getActivity(), selectedItem, items, conditionItem, ChatFragment.this);
         recyclerView.setAdapter(mAdapter);
+
+        items.add(new Bot(ozloHello[3], TEXT));
+        mAdapter.notifyItemInserted(items.size() - 1);
+        recyclerView.smoothScrollToPosition(mAdapter.getItemCount());
 
         PrefManager prefManager = new PrefManager(getActivity(), PrefManager.PREF_NAME_GREETING);
         if (prefManager.isFirstTimeLaunch()) {
@@ -188,8 +192,12 @@ public class ChatFragment extends Fragment {
                         recyclerView.smoothScrollToPosition(mAdapter.getItemCount());
                     }
 
-                } else
+                } else {
                     Toast.makeText(getActivity(), "Not Success", Toast.LENGTH_SHORT).show();
+                    items.add(new Bot("Sorry didn't get you.", TEXT));
+                    mAdapter.notifyDataSetChanged();
+                    recyclerView.smoothScrollToPosition(mAdapter.getItemCount());
+                }
             }
 
             @Override
@@ -199,6 +207,9 @@ public class ChatFragment extends Fragment {
                     mAdapter.notifyDataSetChanged();
                 }
                 Toast.makeText(getActivity(), "Failed", Toast.LENGTH_SHORT).show();
+                items.add(new Bot("Sorry didn't get you.", TEXT));
+                mAdapter.notifyDataSetChanged();
+                recyclerView.smoothScrollToPosition(mAdapter.getItemCount());
             }
         });
     }
