@@ -69,7 +69,7 @@ import static org.xmlpull.v1.XmlPullParser.TEXT;
 public class ChatFragment extends Fragment {
 
     String[] ozloGreets = new String[]{"Hi", "My name is Ozee.", "I'm here to help you diagnose your possible diseases.",
-    "Ask me anything like ", "'I a have headache.' or 'I have a pain in my back.'"};
+    "Ask me anything like ", "'I have a headache.' or 'I have a pain in my back.'"};
 
     String[] ozloHello = new String[]{"Hi!", "Hey! What's up?", "How are you feeling today?",
             "Hi. Tell me about your symptoms.", "Ozee's here!"};
@@ -127,7 +127,7 @@ public class ChatFragment extends Fragment {
         mAdapter = new ChatAdapter(getActivity(), selectedItem, items, conditionItem, ChatFragment.this);
         recyclerView.setAdapter(mAdapter);
 
-        items.add(new Bot(ozloHello[3], TEXT));
+        items.add(new Bot("Ask me anything like 'I have a headache.' or 'I have a pain in my back.'", TEXT));
         mAdapter.notifyItemInserted(items.size() - 1);
         recyclerView.smoothScrollToPosition(mAdapter.getItemCount());
 
@@ -153,6 +153,9 @@ public class ChatFragment extends Fragment {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (items.get(items.size() - 1) instanceof String) {
+                    return;
+                }
                 hideKeyboard();
                 mAdapter.deleteSuggestions();
                 optionItem.clear();
